@@ -4,10 +4,10 @@ import { ListBtn, Btn } from './FeedbackOptions.styled';
 const FeedbackOptions = ({ options, addFeedback }) => {
     return (
         <div>
-            <ListBtn onClick={addFeedback}>
+            <ListBtn >
                 {options.map(option => (
                     <li key={option}>
-                        <Btn type="button" name={option}>{option.toUpperCase()}</Btn>
+                        <Btn type="button" onClick={() => addFeedback(option)}>{option.toUpperCase()}</Btn>
                     </li>
                 ))}
             </ListBtn>
